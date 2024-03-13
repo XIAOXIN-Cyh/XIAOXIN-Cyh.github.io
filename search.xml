@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>！</title>
+      <link href="/2024/02/26/Others/%EF%BC%81/"/>
+      <url>/2024/02/26/Others/%EF%BC%81/</url>
+      
+        <content type="html"><![CDATA[<h1>count(a.begin(), a.end(), x)</h1><p>统计a中x的出现次数</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找a数组中，起始1和末尾1中的0的个数</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    std::cin &gt;&gt; n;</span><br><span class="line">    <span class="function">std::vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        std::cin &gt;&gt; a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, r = n - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (a[l] == <span class="number">0</span>) &#123;</span><br><span class="line">        l++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (a[r] == <span class="number">0</span>) &#123;</span><br><span class="line">        r--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> ans = std::<span class="built_in">count</span>(a.<span class="built_in">begin</span>() + l, a.<span class="built_in">begin</span>() + r, <span class="number">0</span>);</span><br><span class="line">    std::cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1>*min_element(a.begin(), a.end())</h1><p>查找a中的最小值</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//CF929div3</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) &#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> min = *<span class="built_in">min_element</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">count</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>(), min) == <span class="number">1</span>) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Yes\n&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] % min) &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Yes\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;No\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Others </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>考研英语规划</title>
+      <link href="/2024/02/04/Others/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E8%A7%84%E5%88%92/"/>
+      <url>/2024/02/04/Others/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E8%A7%84%E5%88%92/</url>
+      
+        <content type="html"><![CDATA[<h1>基础阶段 3 ~ 6月</h1><h2 id="单词">单词</h2><p><strong>墨墨单词</strong></p><h2 id="语法">语法</h2><p><strong>田静老师</strong></p><h2 id="阅读">阅读</h2><p><strong>唐迟老师</strong></p><p>完成<strong>2010</strong>年之前的<strong>阅读真题</strong></p><h1>强化阶段 7 ~ 8月</h1><h2 id="阅读提高">阅读提高</h2><p>完成<strong>2010 ~ 2020</strong>年的阅读真题<br><strong>注意时间把控</strong></p><h2 id="开启其它板块">开启其它板块</h2><p>完型、新题型、翻译<br>作文：<strong>石雷鹏老师</strong></p><h1>冲刺阶段 9 ~ 10月</h1><p>除阅读外的所有其它板块</p><h2 id="完型">完型</h2><p><strong>宋逸轩老师、易熙人老师</strong></p><h2 id="新题型">新题型</h2><p><strong>刘琦老师、宋逸轩老师</strong></p><h2 id="翻译">翻译</h2><p><strong>唐静老师</strong></p><h2 id="做套卷">做套卷</h2><p>开始按照套卷的形式，做2010年以后的真题，每周一套<br><strong>注意时间分配！！</strong></p><h1>巩固阶段 11 ~ 12月</h1><p>整理模板、查漏补缺</p><h2 id="单词-2">单词</h2><p>11月开始，背诵<strong>高频</strong>单词</p><p>11月底，12月初，<strong>21 ~ 24真题</strong><br><strong>下午2点 ~ 5点，全真模考</strong></p><h2 id="作文">作文</h2><p>整理出自己的作文模板</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Others </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>排序算法总结</title>
+      <link href="/2024/01/21/Algorithms/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+      <url>/2024/01/21/Algorithms/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<h2 id="快速排序">快速排序</h2><p><a href="https://www.acwing.com/solution/content/16777/"><strong>算法证明及边界问题的考虑</strong></a></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">quick_sort</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;a, <span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l &gt;= r - <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> x = a[(l + r - <span class="number">1</span>) / <span class="number">2</span>], i = l - <span class="number">1</span>, j = r;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; j) &#123;</span><br><span class="line">        <span class="keyword">do</span> i ++;</span><br><span class="line">        <span class="keyword">while</span> (a[i] &lt; x);</span><br><span class="line">        <span class="keyword">do</span> j--;</span><br><span class="line">        <span class="keyword">while</span> (a[j] &gt; x);</span><br><span class="line">        <span class="keyword">if</span>(i &lt; j) &#123;</span><br><span class="line">            <span class="built_in">swap</span>(a[i], a[j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">quick_sort</span>(a, l, j + <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">quick_sort</span>(a, j + <span class="number">1</span>, r);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) &#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">quick_sort</span>(a, <span class="number">0</span>, n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) &#123;</span><br><span class="line">        cout &lt;&lt; a[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="归并排序">归并排序</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge_sort</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;a, <span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l &gt;= r - <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">merge_sort</span>(a, l, mid), <span class="built_in">merge_sort</span>(a, mid, r);</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">temp</span><span class="params">(r - l + <span class="number">1</span>)</span></span>;</span><br><span class="line">    <span class="type">int</span> p = <span class="number">0</span>, i = l, j = mid;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; mid &amp;&amp; j &lt; r) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] &lt; a[j]) &#123;</span><br><span class="line">            temp[p++] = a[i++];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            temp[p++] = a[j++];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; mid) &#123;</span><br><span class="line">        temp[p++] = a[i++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(j &lt; r) &#123;</span><br><span class="line">        temp[p++] = a[j++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = l; i &lt; r; i ++ ) &#123;</span><br><span class="line">        a[i] = temp[i - l];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) &#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">merge_sort</span>(a, <span class="number">0</span>, n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) &#123;</span><br><span class="line">        cout &lt;&lt; a[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Algorithms </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Algorithms </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Welcome to 小新&#39;s Blog</title>
+      <link href="/2024/01/19/Others/My%20first%20blog/"/>
+      <url>/2024/01/19/Others/My%20first%20blog/</url>
+      
+        <content type="html"><![CDATA[<h2 id="To-be-continued—😜">To be continued—😜</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Others </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
